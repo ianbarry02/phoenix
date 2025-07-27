@@ -136,7 +136,7 @@ _* Style any "Title" elements as "Heading [X]" elements instead.
 
 Next, download the [Phoenix files](https://github.com/ianbarry02/phoenix/tree/main/phoenix_files): [_phoenix.py](https://github.com/ianbarry02/phoenix/blob/main/phoenix_files/_phoenix.py) and [phoenix.py](https://github.com/ianbarry02/phoenix/blob/main/phoenix_files/phoenix.py). Store these files in a new folder on your machine.
 
-Finally, download the [website files](https://github.com/ianbarry02/phoenix/tree/main/website_files): [index.html](https://github.com/ianbarry02/phoenix/blob/main/website_files/index.html), [script.js](https://github.com/ianbarry02/phoenix/blob/main/website_files/script.js), and [styles.css](https://github.com/ianbarry02/phoenix/blob/main/website_files/styles.css) from the Phoenix repository. Store these files in a new folder on your machine.
+Finally, download the [website files](https://github.com/ianbarry02/phoenix/tree/main/website_files): [index.html](https://github.com/ianbarry02/phoenix/blob/main/website_files/index.html) and [script.js](https://github.com/ianbarry02/phoenix/blob/main/website_files/script.js) from the Phoenix repository. Store these files in a new folder on your machine.
 <br/>
 <br/>
 It can be helpful (but is not necessary) to copy your syllabus into the folder where index.html, script.js, and styles.css are stored.
@@ -174,7 +174,7 @@ Next, modify the following command to include the paths to your Word document an
 Now, the index.html file you downloaded earlier will include the code parsed from your Word document and your desired title. To host your website with GitHub Pages, follow the instructions below:
 
 1. Create a new GitHub repository. Make sure it is a public repository.
-2. Upload your index.html, script.js, and styles.css files to the new repository.
+2. Upload your index.html and script.js files to the new repository.
 3. Under the repository Settings (which you can navigate to using the bar at the top of the page), navigate to the "Pages" tab on the left.
 4. Under the "Build and Deployment" heading, make sure "Source" is set to "Deploy from a branch" and "Branch" is set to "main". Click "Save".
 5. It might take a few minutes for your site to be published. Refresh the page. Eventually, you will see a banner at the top that says, "Your site is live at ...". Click the link to view your site!
