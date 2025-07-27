@@ -29,7 +29,7 @@
   <h3 align="center">Phoenix</h3>
 
   <p align="center">
-    A module that converts course syllabi into website code that features text accessibility tools.
+    A module that converts course syllabi into website code with text accessibility tools.
     <br />
     <!-- <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a> -->
     <br />
