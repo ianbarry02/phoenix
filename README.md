@@ -134,9 +134,9 @@ _* Style any "Title" elements as "Heading [X]" elements instead.
 * Remove headers and footers. You can move information in headers and footers to the body of the document if you need them to be included in your syllabus site.
 * Double check spacing. Phoenix uses Spire.Doc to render blank lines in Word documents as paragraphs, so blank lines will ultimately appear as blank lines on your website, too.
 
-Next, download the [Phoenix files](), [_phoenix.py]() and [phoenix.py](). Store these files in a new folder on your machine.
+Next, download the [Phoenix files](https://github.com/ianbarry02/phoenix/tree/main/phoenix_files): [_phoenix.py](https://github.com/ianbarry02/phoenix/blob/main/phoenix_files/_phoenix.py) and [phoenix.py](https://github.com/ianbarry02/phoenix/blob/main/phoenix_files/phoenix.py). Store these files in a new folder on your machine.
 
-Finally, download the [website files]() [index.html](), [script.js](), and [styles.css]() from the Phoenix repository. Store these files in a new folder on your machine.
+Finally, download the [website files](https://github.com/ianbarry02/phoenix/tree/main/website_files): [index.html](https://github.com/ianbarry02/phoenix/blob/main/website_files/index.html), [script.js](https://github.com/ianbarry02/phoenix/blob/main/website_files/script.js), and [styles.css](https://github.com/ianbarry02/phoenix/blob/main/website_files/styles.css) from the Phoenix repository. Store these files in a new folder on your machine.
 <br/>
 <br/>
 It can be helpful (but is not necessary) to copy your syllabus into the folder where index.html, script.js, and styles.css are stored.
