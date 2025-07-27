@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <!-- insert title -->
+    </title>
+    <style>
+        /* General */
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            margin: 0;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        td, th {
+            border: 1px solid #000000;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+
+        h1, p {
+            margin: 10px 0;
+        }
+
+        .toolbar {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        button, select, input[type="color"] {
+            padding: 8px;
+            font-size: 14px;
+        }
+
+
+        /* Toolbar */
+        .toolbar label {
+            font-weight: bold;
+        }
+
+    </style>
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/opendyslexic@1.0.1/opendyslexic.css" rel="stylesheet">
+</head>
+<body>
+    <div class="toolbar">
+        <label for="font-selector">Font:</label>
+        <select id="font-selector">
+			<option value="opendyslexic">OpenDyslexic</option>
+			<option value="times-new-roman" selected>Times New Roman</option>
+    		<option value="arial">Arial</option>
+		</select>
+        
+        <label for="font-size-selector">Text Size:</label>
+        <button id="increase-font-size">+</button>
+        <button id="decrease-font-size">-</button>
+
+        <label for="font-color-selector">Text Color:</label>
+        <input type="color" id="font-color-selector" />
+
+        <button id="invert-color">Dark Mode</button>
+    </div>
+
+    <div class="content">
+        <!-- insert custom html -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
