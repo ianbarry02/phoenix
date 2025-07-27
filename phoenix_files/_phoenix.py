@@ -29,10 +29,6 @@ def StartCommandLine():
                 document = Document()
                 document.LoadFromFile(word_doc)
 
-                # Set up communication with CSS styling file
-                document.HtmlExportOptions.CssStyleSheetFileName = 'styles.css'
-                document.HtmlExportOptions.CssStyleSheetType = CssStyleSheetType.External
-
                 # Save the document as an HTML file
                 output_file = os.path.join(output_folder, 'word_doc_content.html')
                 document.SaveToFile(output_file, FileFormat.Html)
