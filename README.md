@@ -88,6 +88,7 @@ This is a small step toward increasing accessibility of course syllabi. Phoenix 
 * Text scaling has a floor and ceiling
 
 ### Known Issues
+* Final product not guaranteed to work on mobile devices or in older browsers
 * Table headers lack distinctive styling
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
