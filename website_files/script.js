@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fontColorSelector.addEventListener('input', (event) => {
         const selectedColor = event.target.value;
         document.body.style.color = selectedColor;
-        document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(el => {
+        document.querySelectorAll('p, h1, h2, h3, h4, h5, h6').forEach(el => {
             el.style.color = selectedColor;
         });
     });
@@ -59,14 +59,26 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isInverted) {
             document.body.style.backgroundColor = '#ffffff';
             document.body.style.color = '#000000';
-            document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(el => {
+            document.querySelectorAll('p, h1, h2, h3, h4, h5, h6').forEach(el => {
                 el.style.color = '#000000';
+            });
+            document.querySelectorAll('td, th').forEach(el => {
+            el.style.border = '';
+            });
+            document.querySelectorAll('tr').forEach(el => {
+            el.style.backgroundColor = '';
             });
         } else {
             document.body.style.backgroundColor = '#000000';
             document.body.style.color = '#ffffff';
-            document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(el => {
+            document.querySelectorAll('p, h1, h2, h3, h4, h5, h6').forEach(el => {
                 el.style.color = '#ffffff';
+            });
+            document.querySelectorAll('td, th').forEach(el => {
+            el.style.border = '1px solid #ffffff';
+            });
+            document.querySelectorAll('tr').forEach(el => {
+            el.style.backgroundColor = '#000000';
             });
         }
         isInverted = !isInverted;
