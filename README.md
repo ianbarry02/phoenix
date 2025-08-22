@@ -89,6 +89,7 @@ This is a small step toward increasing accessibility of course syllabi. Phoenix 
 
 ### Known Issues
 * Final product not guaranteed to work on mobile devices or in older browsers
+* Spire.Doc evaluation warning message must be manually removed from HTML code if you do not want to display it
 * Table headers lack distinctive styling
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
