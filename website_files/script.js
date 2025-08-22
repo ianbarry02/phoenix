@@ -28,18 +28,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Change text size
     increaseFontSizeButton.addEventListener('click', () => {
-        currentFontSize += 2;
-        document.body.style.fontSize = currentFontSize + 'px';
-        document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(el => {
-            el.style.fontSize = currentFontSize + 'px';
-        });
+        if (currentFontSize < 32) {
+            currentFontSize += 2;
+            document.body.style.fontSize = currentFontSize + 'px';
+            document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(el => {
+                el.style.fontSize = el.style.fontSize + 'px';
+            });
+        };
     });
 
     decreaseFontSizeButton.addEventListener('click', () => {
-        currentFontSize = Math.max(12, currentFontSize - 2); // Prevent font size from becoming too small
+        currentFontSize = Math.max(12, currentFontSize - 2);
         document.body.style.fontSize = currentFontSize + 'px';
         document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(el => {
-            el.style.fontSize = currentFontSize + 'px';
+            el.style.fontSize = el.style.fontSize + 'px';
         });
     });
 
