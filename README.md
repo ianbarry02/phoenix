@@ -83,9 +83,12 @@ Phoenix is a tool that breaks down text and tables from a Word document, convert
 
 This is a small step toward increasing accessibility of course syllabi. Phoenix was created and is maintained by a graduate student at a public university in the U.S. If you catch bugs or have suggestions for additional features to include in this tool, please see the links above to do so! Thank you for using my tool!
 
+### Recently Resolved Issues (may still be buggy!)
+* Toolbar now scales on mobile devices and minimized desktop windows
+* Text scaling has a floor and ceiling
+
 ### Known Issues
-* Scaling is buggy on tablets and mobile devices; full functionality of text accessibility tools is only guaranteed on laptops or desktop computers
-* Text scaling does not have a ceiling, so if the user increases the text size a lot, the text accessibility toolbar becomes unusable until the page is refreshed
+* Table headers lack distinctive styling
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
