@@ -3,8 +3,9 @@ from spire.doc import *
 from spire.doc.common import *
 import argparse
 import os
+import re
 
-# Add arguments for CLI
+# Add arguments for command line
 def StartCommandLine():
     parser = argparse.ArgumentParser('Syllabus website generation tool')
     parser.add_argument('-doc', '--word_doc', type = str, required = True, help = 'Paste the path to your syllabus Word doc')
@@ -29,6 +30,9 @@ def StartCommandLine():
                 document = Document()
                 document.LoadFromFile(word_doc)
 
+                # Generate external CSS file (commented out because not needed now)
+                # document.HtmlExportOptions.CssStyleSheetType = CssStyleSheetType.External 
+
                 # Save the document as an HTML file
                 output_file = os.path.join(output_folder, 'word_doc_content.html')
                 document.SaveToFile(output_file, FileFormat.Html)
@@ -40,20 +44,23 @@ def StartCommandLine():
                 index = os.path.join(output_folder, 'index.html')
                 customize_html(output_file, index, title)
 
+# Clean up HTML that SpireDoc generates
+# because it won't let you remove inline styling
 def tweak_html(html_file):
+    re_head = re.compile(r'<head\b[^>]*>.*?</head\s*>', re.IGNORECASE | re.DOTALL)
+    re_style = re.compile(r'\s*style\s*=\s*(?:"[^"]*"|\'[^\']*\'|[^\'"\s>]+)', re.IGNORECASE)
+
     with open(html_file, 'r') as file:
         html_content = file.read()
-        tweaked_output_file = html_content.replace('<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Content-Style-Type" content="text/css" /><meta name="generator" content="Spire.Doc" /><title></title><link href="styles.css" type="text/css" rel="stylesheet" /></head><body><div><p><span style="color:#ff0000">Evaluation Warning: The document was created with Spire.Doc for Python.</span></p><h1><span>Hello again</span></h1>', '')
-        tweaked_output_file = tweaked_output_file.replace('<span style="font-family:Arial">', '')
-        tweaked_output_file = tweaked_output_file.replace('<html>', '')
-        tweaked_output_file = tweaked_output_file.replace('</html>', '')
-        tweaked_output_file = tweaked_output_file.replace('<span>', '')
-        tweaked_output_file = tweaked_output_file.replace('</span>', '')
+
+        # Remove inline CSS styling
+        html_content = re_head.sub('', html_content)
+        html_content = re_style.sub('', html_content)
 
     with open(html_file, 'w') as file:
-        file.write(tweaked_output_file)
-    
+        file.write(html_content)
 
+# Plug HTML from Word and title into index.html template
 def customize_html(html_file, index, title):
     with open(html_file, 'r') as output_file:
         output_html = output_file.read()
